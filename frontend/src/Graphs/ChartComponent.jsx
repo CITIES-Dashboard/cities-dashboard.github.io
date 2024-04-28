@@ -26,7 +26,13 @@ const ChartStyleWrapper = styled(Box)(({ theme }) => ({
     overflowX: 'auto',
     overflowY: 'hidden',
     scrollbarGutter: 'stable'
-  }
+  },
+  // add vertical scrollbar to the grandparent of the Calendar chart
+  // i.e., the MUI Box component that wraps the charts
+  // adding the style here to only apply to Calendar charts
+  '& .MuiBox-root:has(> div > .Calendar)': {
+    overflowY: 'auto',
+  },
 }));
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({

@@ -124,7 +124,7 @@ function SubChart(props) {
           if (numberOfYear === 1) {
             totalHeight = yearHeight + yearSpacing + calendarChartMargin.top + calendarChartMargin.bottom
           } else {
-            totalHeight = numberOfYear * (yearHeight + yearSpacing) + calendarChartMargin.top + calendarChartMargin.bottom;
+            totalHeight = Math.min(3, numberOfYear) * (yearHeight + yearSpacing) + calendarChartMargin.top + calendarChartMargin.bottom;
           }
           setCalendarHeight(totalHeight);
         })
